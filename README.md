@@ -1,2 +1,2 @@
 # py-me
-remote python socket.io API
+Remote Python Socket.io API
