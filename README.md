@@ -28,7 +28,7 @@ Configure your website to run py-me in 2 steps :
 
 - To get the output back, use **`socket.on()`** method. It takes 2 arguements with the first one being **"py-out"** and the second one being a JS callback function whose arguement is a JSON Object (data).
 
-The data object consists of **code** (the python code executed), **output** (output of the Python code) and **exceptions** (any exceptions defined by py-me).
+The data object consists of **`code`** (the python code executed), **`output`** (output of the Python code) and **`exceptions`** (any exceptions defined by py-me).
 
 ```JavaScript
   socket.on("py-out", (data) => {
@@ -63,8 +63,13 @@ console.log("exceptions : "+String(data.exceptions));
 });
 ```
 
+---
 
-Here is an example web python interpreter built using py-me : [Web App Based Example](https://py-me.glitch.me/) 
+Here is an example web python interpreter built using py-me : [Web App Based Example](https://py-me.glitch.me/)
+
+[Source Code of the below website](https://github.com/SayadPervez/py-me/tree/main/app/views)
 
 
 ![Web based example image](https://github.com/SayadPervez/py-me/blob/main/app/web%20based%20example.jpg?raw=true)
+
+---
