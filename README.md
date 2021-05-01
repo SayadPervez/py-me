@@ -7,6 +7,12 @@
 - [Accessing py-me as a Client-Side server](#accessing-py-me-as-a-client-side-server-)
 - [Py-me defined exceptions](#py-me-defined-exceptions-)
     * [Unpermitted Modules Exception](#py-me-defined-exceptions-)
+        - [Permitted Modules](#permitted-modules-)
+    * [Banned Words Exception](#banned-words-exception-)
+- [Code of Conduct for everyone](#code-of-conduct-for-everyone-)
+- [Issues we are inviting contributors to fix](#issues-we-are-inviting-contributors-to-fix-)
+- [Contributors](#contributors-)
+- [Clone this Repository](#clone-this-repository-)
 ---
 ## Abstract :
 - Py-me is a Socket.io API used to execute a Python snippet and get back the output for app-development.
@@ -154,13 +160,14 @@ console.log("exceptions : "+String(data.exceptions));
 ### Unpermitted Modules Exception :
 Py-me allows only certain built-in and external modules to be used as a measure of security. When you use py-me API, the python code is sent from your desktop or website to a cloud server where it is executed. A harmful piece of code that tampers with the existing file structure of the server could shutdown py-me services. Thus here are a list of few Modules that are permitted to use :
 
+### Permitted modules :
 
 |  time       |  abc      |  argparse     |  collections    |  copy           |  csv            |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |  **datetime**   |  **decimal**  |  **functools**    |  **hashlib**        |  **http**           |  **importlib**      |
 |  **itertools**  |  **inspect**  |  **json**         |  **logging**        |  **math**           |  **pdb**            |
 |  **random**     |  **re**       |  **shutil**       |  **types**          |  **urllib**         |  **uuid**           |
-|  **ast**        |  **numpy**    |  **numpy as np**  |  **field-vacant**   |  **field-vacant**   |  **field-vacant**   |
+|  **ast**        |  **numpy**    |  **numpy as np**  |  **datetime as dt**   |  **logging as log**   |  **---**   |
 
 
 Unpermitted Modules Exception arises when you try to use any modules other than the permitted ones.
@@ -173,3 +180,41 @@ import random          # This would work just fine
 import random as rd    # This would throw an exception since "random as rd" is not in permitted modules list.
 import numpy as np     # This would work since "numpy as np" is defined in the permitted list.
 ```
+
+---
+
+
+### Banned Words Exception :
+Py-me doesn't allow certain words and functions to be used in the code. These words are :
+
+|  allowed_modules.csv       |  package.json      |  pyme.py     |  server.js    |
+|:---:|:---:|:---:|:---:|
+|  **v.py**   |  **vx.py**  |  **clear.py**    |  **index.html**        |
+|  **script.js**  |  **style.css**  |  **sleep**         |  **exec**        |
+|  **eval**     |  **subprocess**       |  **rmdir**       |  **os.sys**          |
+
+These are either existing file names in the server or commands we don't want you to perform. We would appreciate if you don't use these set of words anywhere in your code.
+
+---
+
+## Code of Conduct for everyone :
+- Don't create, modify or delete files in py-me.
+- Don't use py-me as a data storage server. All files except the program files required for py-me would be deleted every 30 seconds.
+- Don't use py-me for programs that consume a lot of time and cpu resources.
+
+---
+
+## Issues we are inviting contributors to fix :
+- Add synchronous ability to handle multiple requests at once.
+- Execute the code in a python virtual environment rather than in the same level as the server.
+- Add documentation to access py-me from other languages.
+
+---
+## Contributors :
+|  Sayad Pervez   |  Main Contributor & Founder of py-me  | [Sayad Pervez - Github](https://github.com/SayadPervez/SayadPervez) |
+|:---:|:---:|:---:|
+
+---
+## Clone this Repository :
+- [Clone Glitch Repo](https://glitch.com/~py-me)
+- [Clone Github Repo](https://github.com/SayadPervez/py-me)
