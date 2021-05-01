@@ -17,14 +17,20 @@ This is what py-me was built for, running a python script off a website using Ja
 
 Configure your website to run py-me in 2 steps :
 - **Step 1** : Add this Socket.io link to your HTML page.
-```<script src="https://py-me.glitch.me/socket.io/socket.io.js"></script>```
+```JavaScript
+<script src="https://py-me.glitch.me/socket.io/socket.io.js"></script>
+```
 - **Step 2** : Initialize the socket in your JS file.
-```var socket = io("https://py-me.glitch.me/");```
+```JavaScript
+var socket = io("https://py-me.glitch.me/");
+```
 
 ---
 - To send your python code to the server for execution, use the **`socket.emit()`** method. This is similar to a HTTP request. **socket.emit()** method takes 2 arguements. The 1st arguement shall always be **"py-me"** and the 2nd one is a JSON object containing your code in a key named **"code"**.
 
-```socket.emit("py-me", { code : python_code } );```
+```JavaScript
+socket.emit("py-me", { code : python_code } );
+```
 
 - To get the output back, use **`socket.on()`** method. It takes 2 arguements with the first one being **"py-out"** and the second one being a JS callback function whose arguement is a JSON Object (data).
 
