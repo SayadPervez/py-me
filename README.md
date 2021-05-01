@@ -108,7 +108,7 @@ This example will explain How to call py-me from a **NodeJS** server :
 
 - **Installation** : Install **`Socket.io-client`** from npm.
 ```bash
-npm install Socket.io-client
+npm install socket.io-client@2.3.0
 ```
 - **Initialization** : Add the following lines to initialize your socket connection to py-me.
 ```JavaScript
