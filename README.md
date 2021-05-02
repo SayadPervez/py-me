@@ -167,14 +167,14 @@ Py-me allows only certain built-in and external modules to be used as a measure 
 |  **datetime**   |  **decimal**  |  **functools**    |  **hashlib**        |  **http**           |  **importlib**      |
 |  **itertools**  |  **inspect**  |  **json**         |  **logging**        |  **math**           |  **pdb**            |
 |  **random**     |  **re**       |  **shutil**       |  **types**          |  **urllib**         |  **uuid**           |
-|  **ast**        |  **numpy**    |  **numpy as np**  |  **datetime as dt**   |  **logging as log**   |  **---**   |
+|  **ast**        |  **numpy**    |  **numpy as np**  |  **datetime as dt**   |  **logging as log**   |  **scipy**   |
 
 
 Unpermitted Modules Exception arises when you try to use any modules other than the permitted ones.
 
 Note that importing a module as something else will also throw this exception.
 
-The only external module available to use is **`numpy`**.
+The only external module available to use is **`numpy`** and **`scipy`**.
 ```Python
 import random          # This would work just fine
 import random as rd    # This would throw an exception since "random as rd" is not in permitted modules list.
