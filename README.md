@@ -31,11 +31,11 @@ This is what py-me was built for, running a python script off a website using Ja
 Configure your website to run py-me in 2 steps :
 - **Step 1** : Add this Socket.io link to your HTML page.
 ```JavaScript
-<script src="https://py-me.glitch.me/socket.io/socket.io.js"></script>
+<script src="https://py-me.herokuapp.com/socket.io/socket.io.js"></script>
 ```
 - **Step 2** : Initialize the socket in your JS file.
 ```JavaScript
-var socket = io("https://py-me.glitch.me/");
+var socket = io("https://py-me.herokuapp.com/");
 ```
 
 ---
@@ -63,7 +63,7 @@ The data object consists of **`code`** (the python code executed), **`output`** 
 The final JS code file looks something like :
 
 ```JavaScript
-var socket = io("https://py-me.glitch.me/");
+var socket = io("https://py-me.herokuapp.com/");
 
 python_code=`
 # Your Python code here :
@@ -84,7 +84,7 @@ console.log("exceptions : "+String(data.exceptions));
 
 ---
 
-Here is an example web python interpreter built using py-me : [Web App Based Example](https://py-me.glitch.me/)
+Here is an example web python interpreter built using py-me : [Web App Based Example](https://py-me.herokuapp.com/)
 
 [Source Code of the below website](https://github.com/SayadPervez/py-me/tree/main/app/views)
 
@@ -114,7 +114,7 @@ npm install socket.io-client@2.3.0
 - **Initialization** : Add the following lines to initialize your socket connection to py-me.
 ```JavaScript
 const sio = require("socket.io-client")
-const io = sio.connect("https://py-me.glitch.me/");
+const io = sio.connect("https://py-me.herokuapp.com/");
 ```
 
 - **Emit event** : To send your python code to the server for execution, use the **`io.emit()`** method. This is similar to a HTTP request. **io.emit()** method takes 2 arguements. The 1st arguement shall always be **"py-me"** and the 2nd one is a JSON object containing your python code in a key named **"code"**.
@@ -140,7 +140,7 @@ The data object consists of **`code`** (the python code executed), **`output`** 
 ```JavaScript
 // npm install Socket.io-client
 const sio = require("socket.io-client")
-const io = sio.connect("https://py-me.glitch.me/");
+const io = sio.connect("https://py-me.herokuapp.com/");
 
 var python_code = 'print("hello world")';
 
