@@ -1,4 +1,4 @@
-var socket = io("https://py-me.glitch.me/");
+var socket = io("https://py-me.herokuapp.com/");
 var cd = ``;
 
 document.getElementById('codebox').addEventListener('keydown', function(e) {
