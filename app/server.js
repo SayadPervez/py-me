@@ -33,6 +33,11 @@ function validate(code){
   const output = execSync("python3 v.py "+`"${code}"`, { encoding: 'utf-8' });
   return(output);
 }
+function vx(code){
+  const execSync = require('child_process').execSync;
+  const output = execSync("python3 vx.py "+`"${code}"`, { encoding: 'utf-8' });
+  return(output);
+}
 
 io.on('connection', (socket) => {
   socket.on("Hi",(x)=>{
@@ -44,8 +49,17 @@ io.on('connection', (socket) => {
     var st = validate(x.code);
     if(st.replace("\n","")=="$-SUCCESS-$")
     {
-      var out=py((x.code).replace(/"/g, "'"));
-      io.to(socket.id).emit("py-out",{code:x.code,output:out,exceptions:"None"});
+      var sx = vx(x.code);
+      if(sx.replace("\n","")=="$-SUCCESS-$")
+      {  
+        var out=py((x.code).replace(/"/g, "'"));
+        io.to(socket.id).emit("py-out",{code:x.code,output:out,exceptions:"None"});
+        cls();
+      }
+      else
+      {
+        io.to(socket.id).emit("py-out",{code:x.code,output:"Code was not executed due to Banned Words Exception\n",exceptions:"Banned Words Exception :\n"+sx+"<-^--- words are not allowed to be used in py-me.\nCheck documentation for banned words !\n"});    
+      }
     }
     else
     {
