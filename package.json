@@ -13,8 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pip install numpy && pip install scipy"
+    "test": "pip install numpy && pip install scipy",
+    "start": "node server.js"
   },
   "author": "Sayad Pervez B",
   "license": "ISC"
