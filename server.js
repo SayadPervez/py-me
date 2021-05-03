@@ -11,7 +11,7 @@ function pip(){
   const output = execSync("pip3 install numpy ", { encoding: 'utf-8' });
   console.log("numpy installed");
 }
-//pip();
+pip();
 
 function cls(){
   const execSync = require('child_process').execSync;
