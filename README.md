@@ -15,7 +15,7 @@
 - [Clone this Repository](#clone-this-repository-)
 ---
 ## Abstract :
-- Py-me is a Socket.io API used to execute a Python snippet and get back the output for app-development.
+- Py-me is a Socket.io API used to execute a Python snippet and get back the output for easier software developement.
 - Py-me is secure, free and can be accessed from any language that has Socket.io Framework.
 - Py-me was built specially for static webpages hosted on free web hosting services like GitHub, Glitch and Heroku where you might have to pay for a Backend services.
 - A static website has various limitations which can be overcome using py-me.
@@ -106,10 +106,11 @@ For more info, check this out : [Socket.io Docs](https://socket.io/docs/v4/index
 
 This example will explain How to call py-me from a **NodeJS** server :
 
-- **Installation** : Install **`Socket.io-client`** from npm.
+- **Installation** : Install **`Socket.io-client 2.3.0`** from npm.
 ```bash
 npm install socket.io-client@2.3.0
 ```
+> Other socket.io-client versions might have problems connecting to py-me.
 - **Initialization** : Add the following lines to initialize your socket connection to py-me.
 ```JavaScript
 const sio = require("socket.io-client")
