@@ -4,12 +4,12 @@ import os
 try:
   import numpy
 except Exception as e:
-  os.system("pip3 install numpy")
+  os.system("pip install numpy")
   
 try:
   import scipy
 except Exception as e:
-  os.system("pip3 install scipy")
+  os.system("pip install scipy")
 
 def validate(code):
     with open("allowed_modules.csv","r") as f:

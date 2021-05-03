@@ -1,5 +1,5 @@
 {
-  "name": "my_mail_server",
+  "name": "py-me",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,6 +16,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Sayad Pervez B",
   "license": "ISC"
 }
