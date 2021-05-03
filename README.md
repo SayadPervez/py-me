@@ -89,7 +89,7 @@ Here is an example web python interpreter built using py-me : [Web App Based Exa
 [Source Code of the below website](https://github.com/SayadPervez/py-me/tree/main/app/views)
 
 
-![Web based example image](https://github.com/SayadPervez/py-me/blob/main/app/web%20based%20example.jpg?raw=true)
+![Web based example image](https://py-me.herokuapp.com/image.jpg)
 
 ---
 ## Accessing py-me as a Client-Side server :
