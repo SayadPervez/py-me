@@ -138,7 +138,7 @@ The data object consists of **`code`** (the python code executed), **`output`** 
 - **Final code** : Run your final code using NodeJS.
 
 ```JavaScript
-// npm install Socket.io-client
+// npm install Socket.io-client@2.3.0
 const sio = require("socket.io-client")
 const io = sio.connect("https://py-me.herokuapp.com/");
 
