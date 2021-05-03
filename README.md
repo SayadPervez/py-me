@@ -9,7 +9,7 @@
     * [Unpermitted Modules Exception](#py-me-defined-exceptions-)
         - [Permitted Modules](#permitted-modules-)
     * [Banned Words Exception](#banned-words-exception-)
-- [Code of Conduct for everyone](#code-of-conduct-for-everyone-)
+- [Code of Conduct](#code-of-conduct-)
 - [Issues we are inviting contributors to fix](#issues-we-are-inviting-contributors-to-fix-)
 - [Contributors](#contributors-)
 - [Clone this Repository](#clone-this-repository-)
@@ -198,7 +198,7 @@ These are either existing file names in the server or commands we don't want you
 
 ---
 
-## Code of Conduct for everyone :
+## Code of Conduct :
 - Don't create, modify or delete files in py-me.
 - Don't use py-me as a data storage server. All files except the program files required for py-me would be deleted every 30 seconds.
 - Don't use py-me for programs that consume a lot of time and cpu resources.
