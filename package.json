@@ -14,7 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "pip install numpy && pip install scipy"
   },
   "author": "Sayad Pervez B",
   "license": "ISC"
