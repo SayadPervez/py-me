@@ -8,7 +8,7 @@ app.use(express.static("./views"));
 
 function pip(){
   const execSync = require('child_process').execSync;
-  const output = execSync("pip install numpy ", { encoding: 'utf-8' });
+  const output = execSync("pip3 install numpy ", { encoding: 'utf-8' });
   console.log("numpy installed");
 }
 //pip();
